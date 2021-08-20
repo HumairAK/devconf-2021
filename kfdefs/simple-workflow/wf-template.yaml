@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  name: simple-template-example
+spec:
+  entrypoint: whalesay-template
+  arguments:
+    parameters:
+      - name: message
+        value: hello world
+  templates:
+    - name: simple-workflow
+      inputs:
+        parameters:
+          - name: message
+      container:
+        image: quay.io/hukhan/whalesay:latest
+        command: [cowsay]
+        args: ["{{inputs.parameters.message}}"]
