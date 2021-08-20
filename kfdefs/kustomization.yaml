@@ -1,6 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-
+namespace: opendatahub
 resources:
-  - operatorgroup.yaml
-  - subscription.yaml
+  - kfdef.yaml
+  - namespace.yaml
+  - argo-workflows-cluster-rbac
+  - simple-workflow

@@ -7,6 +7,6 @@ spec:
   templates:
     - name: whalesay            # Defining the "whalesay" template
       container:
-        image: docker/whalesay
+        image: quay.io/hukhan/whalesay:latest
         command: [cowsay]
         args: ["hello world"]   # This template runs "cowsay" in the "whalesay" image with arguments "hello world"

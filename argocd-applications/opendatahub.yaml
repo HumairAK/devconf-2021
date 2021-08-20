@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: opendatahub
+spec:
+  destination:
+    name: in-cluster
+    namespace: openshift-operators
+  project: default
+  source:
+    path: opendatahub
+    repoURL: https://github.com/HumairAK/devconf-2021.git
+    targetRevision: HEAD
+#### Uncomment Below to enable AutoSync
+#  syncPolicy:
+#    automated:
+#      prune: true
+#      selfHeal: true
+#    syncOptions:
+#      - Validate=false
