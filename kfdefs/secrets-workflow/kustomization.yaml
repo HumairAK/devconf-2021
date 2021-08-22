@@ -3,4 +3,6 @@ kind: Kustomization
 
 resources:
   - secrets-example.yaml
-  - ./secrets/secrets.yaml
+
+generators:
+  - secrets/ksops-generator.yaml
