@@ -6,3 +6,4 @@ resources:
   - namespace.yaml
   - argo-workflows-cluster-rbac
   - images
+  - secrets-workflow
