@@ -5,3 +5,4 @@ resources:
   - kfdef.yaml
   - namespace.yaml
   - argo-workflows-cluster-rbac
+  - images
