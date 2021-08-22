@@ -5,6 +5,6 @@ resources:
   - kfdef.yaml
   - namespace.yaml
   - argo-workflows-cluster-rbac
-#  - images
+  - images
 #  - simple-workflow
 #  - secrets-workflow
